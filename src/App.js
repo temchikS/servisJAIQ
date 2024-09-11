@@ -3,6 +3,9 @@ import Main from "./components/main";
 import "./App.css";
 import RepairmanPage from "./components/repairman";
 import Header from "./components/header";
+import AboutUs from "./components/onas";
+import RegistrationForm from "./components/register";
+import SupportForm from "./components/help";
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/repairman-page" element={<RepairmanPage />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/registration" element={<RegistrationForm />} />
+          <Route path="/support" element={<SupportForm />} />
         </Routes>
       </Router>
     </div>

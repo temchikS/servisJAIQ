@@ -1,0 +1,24 @@
+/* HEADER */
+header {
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+.header-cont {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+.nav,
+.search-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+@media (max-width: 1080px) {
+  .header-cont {
+    width: 95%;
+  }
+}
