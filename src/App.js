@@ -1,17 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Main from "./components/main";
-import "./App.css";
 import RepairmanPage from "./components/repairman";
-import Header from "./components/header";
 import AboutUs from "./components/onas";
 import RegistrationForm from "./components/register";
 import SupportForm from "./components/help";
+import Layout from "./Layout.js";
+import "./App.css";
 
 function App() {
   return (
-    <div>
-      <Router>
-        <Header />
+    <Router>
+      <Layout>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/repairman-page" element={<RepairmanPage />} />
@@ -19,8 +18,8 @@ function App() {
           <Route path="/registration" element={<RegistrationForm />} />
           <Route path="/support" element={<SupportForm />} />
         </Routes>
-      </Router>
-    </div>
+      </Layout>
+    </Router>
   );
 }
 
