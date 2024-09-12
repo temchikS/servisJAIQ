@@ -67,67 +67,63 @@ const styles = {
   header: {
     width: "100%",
     padding: "20px",
-    marginBottom: "20px",
+    marginBottom: "30px", // Увеличено расстояние снизу
     textAlign: "center",
   },
   headerText: {
     margin: 0,
-    fontSize: "24px",
+    fontSize: "32px", // Увеличен размер шрифта
   },
   form: {
     display: "flex",
     flexDirection: "column",
-    gap: "15px",
-    width: "100%",
-    maxWidth: "500px",
+    alignItems: "flex-start", // Выравнивание по левому краю
+    width: "500px", // Ширина формы соответствует ширине текстового поля
   },
   inputGroup: {
     display: "flex",
-    gap: "15px",
-    marginBottom: "10px",
+    gap: "50px", // Расстояние между полями ввода
+    marginBottom: "20px", // Увеличено расстояние снизу
+    width: "100%",
   },
   input: {
-    flex: 1,
-    padding: "10px",
-    fontSize: "16px",
+    width: "calc(50% - 25px)", // Ширина полей ввода с учетом расстояния между ними
+    padding: "15px", // Увеличен паддинг
+    fontSize: "18px", // Увеличен размер шрифта
     border: "1px solid #aaa", // Серый цвет окантовки
     borderRadius: "5px",
     backgroundColor: "#333", // Темный фон для полей ввода
     color: "#fff", // Белый текст в полях ввода
     outline: "none",
+    boxSizing: "border-box",
     transition: "border-color 0.3s",
   },
-  input: {
-    '&:focus': {
-      borderColor: "#007BFF", // Подсветка при фокусировке
-    },
-  },
   textarea: {
-    width: "100%",
-    height: "150px",
-    padding: "10px",
-    fontSize: "16px",
+    width: "100%", // Ширина текстового поля
+    height: "150px", // Высота текстового поля
+    padding: "15px", // Увеличен паддинг
+    fontSize: "18px", // Увеличен размер шрифта
     border: "1px solid #aaa", // Серый цвет окантовки
     borderRadius: "5px",
     backgroundColor: "#333", // Темный фон для текстовой области
     color: "#fff", // Белый текст в текстовой области
     resize: "none",
     outline: "none",
+    boxSizing: "border-box",
     transition: "border-color 0.3s",
   },
-  textarea: {
-    '&:focus': {
-      borderColor: "#007BFF", // Подсветка при фокусировке
-    },
-  },
   button: {
+    width: "100%", // Ширина кнопки соответствует ширине формы
+    height: "40px", // Высота кнопки
     backgroundColor: "#007BFF", // Синий фон
     color: "#fff", // Белый текст
     padding: "10px",
-    fontSize: "16px",
+    fontSize: "18px", // Увеличен размер шрифта
     border: "none",
     borderRadius: "5px",
     cursor: "pointer",
+    boxSizing: "border-box",
+    marginTop: "20px", // Расстояние от текстового поля
   },
 };
 
