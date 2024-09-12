@@ -1,7 +1,15 @@
+import React, { useState } from "react";
 import pfp from "../images/avatar.png";
 import Reviews from "./master-reviews";
+import Order from "./zaivka"; // Импортируем компонент Order
 import "./repairman.css";
+
 function RepairmanPage() {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
+
   return (
     <div className="flex-center">
       <div className="container">
@@ -24,12 +32,17 @@ function RepairmanPage() {
               <button className="share">Поделиться</button>
               <button className="follow">Подписаться</button>
             </div>
-            <button className="order">Оставить заявку</button>
+            <button className="order" onClick={openModal}>
+              Оставить заявку
+            </button>
           </div>
         </div>
         <Reviews />
       </div>
+
+      <Order showModal={showModal} closeModal={closeModal} />
     </div>
   );
 }
+
 export default RepairmanPage;
