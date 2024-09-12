@@ -98,6 +98,15 @@ main {
 .masters {
   grid-column: 2; /* Правый столбец */
 }
+.search-category {
+  display: none;
+}
+.categories-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+}
 .category-item {
   padding: 5px;
   width: 80%;
@@ -167,5 +176,47 @@ h4 {
 @media (max-width: 1080px) {
   .container {
     width: 95%;
+  }
+}
+@media (max-width: 720px) {
+  .cm-cont {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(auto, 3);
+    gap: 20px;
+  }
+  .search {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .categories {
+    grid-column: 1;
+    grid-row: 2;
+    flex-direction: column;
+  }
+  .masters {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .categories > h1 {
+    display: none;
+  }
+  .search-category {
+    background-color: rgba(240, 240, 240, 1);
+    border: 2px solid rgba(189, 189, 189, 1);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .search-category > input {
+    background-color: transparent;
+    border: none;
+  }
+  .categories-container {
+    background-color: rgba(240, 240, 240, 1);
+    height: 150px;
+    border: 2px solid rgba(189, 189, 189, 1);
+    overflow-y: scroll;
   }
 }
